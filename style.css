@@ -1,0 +1,139 @@
+/* **********
+Imports
+********** */
+@font-face{
+    font-family: 'Red Hat Display';
+    src: url(./fonts/static/RedHatDisplay-Medium.ttf);
+    font-weight: 500;
+}
+@font-face{
+    font-family: 'Red Hat Display';
+    src: url(./fonts/static/RedHatDisplay-Bold.ttf);
+    font-weight: 700;
+}
+@font-face{
+    font-family: 'Red Hat Display';
+    src: url(./fonts/static/RedHatDisplay-Black.ttf);
+    font-weight: 900;
+}
+/* **********
+Reset
+********** */
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+ul{
+    list-style: none;
+}
+img{
+    max-width: 100%;
+}
+/* **********
+Global
+********** */
+:root{
+--Pale-blue: hsl(225, 100%, 94%);
+--Bright-blue: hsl(245, 75%, 52%);
+--Very-pale-blue: hsl(225, 100%, 98%);
+--Desaturated-blue: hsl(224, 23%, 55%);
+--Dark-blue: hsl(223, 47%, 23%);
+}
+body{
+    background-color: var(--Pale-blue);
+    text-align: center;
+    line-height: 2em;
+    font-size: 16px;
+    font-family: Red Hat Display;
+}
+.title{
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+h1{
+    color: var(--Dark-blue);
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+/* **********
+Page Contens
+********** */
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.card{
+    background-color: white;
+    padding: 0px 0px 20px;
+    width: 90%;
+    border-radius: 0.625em;
+    /* box-shadow: 2px 1px 3px 1px var(--Light-gray); */
+}
+header img{
+    border-top-left-radius: 0.625em;
+    border-top-right-radius: 0.625em;
+}
+.subscription{
+    background-color: var(--Very-pale-blue);
+    margin-bottom: 0.7em;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8em;
+    width: 90%;
+    margin: 0 auto;
+}
+.sub-data{
+    display: flex;
+    align-items: center;
+}
+.sub-data image{
+    width: 45px;
+    height: 45px;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+h2{
+    color: var(--Dark-blue);
+    font-weight: 900;
+}
+p{
+    color: var(--Desaturated-blue);
+    line-height: 1,6;
+}
+.container{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.sub-btn a:first-child{
+    color: #fff;
+    background-color: var(--Bright-blue);
+    text-decoration: none;
+    box-shadow: 0 20px 7px 0 var(--Pale-blue);
+    padding: 20px 10px;
+    display: block;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.sub-btn a:nth-child(2){
+    text-decoration: none;
+}
+/* **********
+Media
+********** */
+@media screen and (min-width: 687px) {
+    .card{
+        width: 50%;
+    }
+}
+@media screen and (min-width: 1023px) {
+    .card{
+        width: 30%;
+    }
+}
